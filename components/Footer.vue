@@ -3,9 +3,10 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
-                    <h3 class="font-serif text-xl font-semibold mb-4 text-primary">Portfolio</h3>
+                    <h3 class="font-serif text-xl font-semibold mb-4 text-primary">Anirudh Achari</h3>
                     <p class="text-muted-foreground">
-                        A creative developer passionate about building beautiful digital experiences.
+                        Just your friendly neighborhood developer—slinging code, squashing bugs, and occasionally saving
+                        the sprint at the last second.
                     </p>
                 </div>
 
