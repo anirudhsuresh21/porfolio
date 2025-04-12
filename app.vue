@@ -6,7 +6,7 @@ import { NuxtPage, NuxtLayout } from './.nuxt/components';
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
   </Head>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <!-- <NuxtLayout> -->
+  <NuxtPage />
+  <!-- </NuxtLayout> -->
 </template>
