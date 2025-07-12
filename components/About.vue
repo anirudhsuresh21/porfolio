@@ -44,7 +44,7 @@ const traits = ['Quick Learner', 'Collaborative', "Adaptable", 'Problem Solver',
                             <div class="text-sm text-muted-foreground space-y-1">
                                 <p><strong>Assistant Developer (Intern)</strong></p>
                                 <p>Ocufox Technologies Pvt. Ltd. · Internship</p>
-                                <p>May 2024 – Present · 1 yr</p>
+                                <p>May 2024 – Present · 1 Year 2 Months</p>
                                 <p>Mumbai, Maharashtra, India · Full-Time</p>
                                 <p>
                                     Currently contributing to Flutter apps and full-stack solutions using Nuxt.js
