@@ -1,47 +1,71 @@
 <template>
     <header :class="[
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-6 md:px-12',
         isScrolled
-            ? 'bg-background/90 backdrop-blur-md border-b border-border/50'
+            ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-primary/5'
             : 'bg-transparent'
     ]">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="#home" class="font-serif text-xl font-bold text-primary">
-                Anirudh Achari
+            <!-- Enhanced logo -->
+            <a href="#home" class="group relative">
+                <span
+                    class="font-serif text-xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent group-hover:from-primary/80 group-hover:to-primary transition-all duration-300">
+                    Anirudh Achari
+                </span>
+                <div
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 group-hover:w-full transition-all duration-300">
+                </div>
             </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Enhanced Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a v-for="link in navLinks" :key="link.name" :href="link.href"
-                    class="text-sm font-medium transition-colors hover:text-primary relative group py-2">
+                    class="text-sm font-medium transition-all duration-300 hover:text-primary relative group py-2 px-1">
                     {{ link.name }}
                     <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></span>
+                    <div
+                        class="absolute inset-0 bg-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
+                    </div>
                 </a>
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden" @click="toggleMobileMenu" aria-label="Toggle menu">
+            <!-- Enhanced Mobile Menu Button -->
+            <button class="md:hidden relative p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300"
+                @click="toggleMobileMenu" aria-label="Toggle menu">
                 <div class="w-6 h-5 flex flex-col justify-between">
-                    <span
-                        :class="['w-full h-0.5 bg-foreground transition-all duration-300', mobileMenuOpen && 'translate-y-2 rotate-45']" />
-                    <span
-                        :class="['w-full h-0.5 bg-foreground transition-all duration-300', mobileMenuOpen && 'opacity-0']" />
-                    <span
-                        :class="['w-full h-0.5 bg-foreground transition-all duration-300', mobileMenuOpen && '-translate-y-2 -rotate-45']" />
+                    <span :class="[
+                        'w-full h-0.5 bg-primary transition-all duration-300 rounded-full',
+                        mobileMenuOpen && 'translate-y-2 rotate-45 bg-primary'
+                    ]" />
+                    <span :class="[
+                        'w-full h-0.5 bg-primary transition-all duration-300 rounded-full',
+                        mobileMenuOpen && 'opacity-0'
+                    ]" />
+                    <span :class="[
+                        'w-full h-0.5 bg-primary transition-all duration-300 rounded-full',
+                        mobileMenuOpen && '-translate-y-2 -rotate-45 bg-primary'
+                    ]" />
                 </div>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
+        <!-- Enhanced Mobile Navigation -->
         <div :class="[
-            'md:hidden fixed inset-x-0 top-16 p-6 pt-0 bg-background/95 backdrop-blur-md border-b border-border/50 transition-all duration-300 transform',
-            mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+            'md:hidden fixed inset-x-0 top-[72px] mx-6 rounded-2xl bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl transition-all duration-500 transform overflow-hidden',
+            mobileMenuOpen ? 'translate-y-0 opacity-100 scale-100' : '-translate-y-8 opacity-0 scale-95 pointer-events-none'
         ]">
-            <nav class="flex flex-col space-y-6 py-8">
-                <a v-for="link in navLinks" :key="link.name" :href="link.href"
-                    class="text-lg font-medium hover:text-primary transition-colors" @click="closeMobileMenu">
-                    {{ link.name }}
+            <nav class="flex flex-col p-6">
+                <a v-for="(link, index) in navLinks" :key="link.name" :href="link.href"
+                    class="group flex items-center gap-3 py-4 px-4 text-lg font-medium hover:text-primary transition-all duration-300 rounded-xl hover:bg-primary/10 relative overflow-hidden"
+                    :style="{ animationDelay: `${index * 0.1}s` }" @click="closeMobileMenu">
+                    <div
+                        class="w-2 h-2 rounded-full bg-primary/30 group-hover:bg-primary transition-colors duration-300">
+                    </div>
+                    <span>{{ link.name }}</span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
+                    </div>
                 </a>
             </nav>
         </div>
