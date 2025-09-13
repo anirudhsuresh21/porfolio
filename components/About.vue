@@ -71,7 +71,7 @@ const traits = ['Quick Learner', 'Collaborative', "Adaptable", 'Problem Solver',
                                     <p
                                         class="font-bold text-lg bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                                         Experience</p>
-                                    <p class="text-xs text-muted-foreground">Current Position</p>
+                                    <!-- <p class="text-xs text-muted-foreground">Current Position</p> -->
                                 </div>
                             </div>
 
@@ -83,7 +83,7 @@ const traits = ['Quick Learner', 'Collaborative', "Adaptable", 'Problem Solver',
 
                                 <div class="flex items-center gap-2 text-xs text-muted-foreground">
                                     <Icon name="lucide:calendar" class="w-3 h-3" />
-                                    <span>May 2024 – Present · 1 Year 2 Months</span>
+                                    <span>May 2024 – Sept 2025 · 1 Year 4 Months</span>
                                 </div>
 
                                 <div class="flex items-center gap-2 text-xs text-muted-foreground">
